@@ -1,6 +1,7 @@
 ﻿using VerticalGame.Engine;
 using VerticalGame.States;
 using System;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace VerticalGame
 {

@@ -1,8 +1,6 @@
-﻿using VerticalGame.Engine.States;
-using VerticalGame.States;
-
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using VerticalGame.Engine.States;
 
 namespace VerticalGame.Engine
 {
@@ -13,8 +11,8 @@ namespace VerticalGame.Engine
     {
         private BaseGameState _currentGameState;
 
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
 
         private RenderTarget2D _renderTarget;
         private Rectangle _renderScaleRectangle;
@@ -47,7 +45,7 @@ namespace VerticalGame.Engine
             graphics.PreferredBackBufferWidth = _DesignedResolutionWidth;
             graphics.PreferredBackBufferHeight = _DesignedResolutionHeight;
             graphics.IsFullScreen = false;
-            graphics.SynchronizeWithVerticalRetrace = false;
+            graphics.SynchronizeWithVerticalRetrace = true;
             graphics.ApplyChanges();
 
             _renderTarget = new RenderTarget2D(graphics.GraphicsDevice, _DesignedResolutionWidth, _DesignedResolutionHeight, false,

@@ -78,6 +78,7 @@ namespace VerticalGame.States
 
         private Level _level;
 
+
         public override void LoadContent()
         {
             _debug = true;
