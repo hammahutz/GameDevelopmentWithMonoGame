@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameDev.Vertical", "GameDev.Vertical", "{7D0CBA7A-902D-489B-9CC6-27CC87F69CB6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VerticalShooter", "VerticalShooter", "{7D0CBA7A-902D-489B-9CC6-27CC87F69CB6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "chapter11", "GameDev.Vertical\game\chapter11.csproj", "{21FE1522-A71B-4ACD-B113-DA76B7049403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineExtension", "PipelineExtension\PipelineExtension.csproj", "{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{21FE1522-A71B-4ACD-B113-DA76B7049403}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21FE1522-A71B-4ACD-B113-DA76B7049403}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21FE1522-A71B-4ACD-B113-DA76B7049403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{21FE1522-A71B-4ACD-B113-DA76B7049403} = {7D0CBA7A-902D-489B-9CC6-27CC87F69CB6}
+		{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2} = {7D0CBA7A-902D-489B-9CC6-27CC87F69CB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5F5DCE0-43B0-4666-BA8F-2FEE60B23440}

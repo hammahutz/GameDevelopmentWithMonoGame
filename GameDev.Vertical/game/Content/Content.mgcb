@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:..\..\..\PipelineExtension\bin\Release\net6.0\PipelineExtension.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -207,4 +208,9 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Fonts/Stats.spritefont
+
+#begin Levels/Level1.txt
+/importer:LevelImporter
+/processor:LevelProcessor
+/build:Levels/Level1.txt
 
