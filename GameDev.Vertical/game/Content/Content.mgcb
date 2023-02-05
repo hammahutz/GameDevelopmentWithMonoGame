@@ -11,8 +11,19 @@
 #-------------------------------- References --------------------------------#
 
 /reference:..\..\..\PipelineExtension\bin\Release\net6.0\PipelineExtension.dll
+/reference:..\..\..\Engine2DPipelineExtensions\bin\Release\net6.0\Engine2DPipelineExtensions.dll
 
 #---------------------------------- Content ---------------------------------#
+
+#begin ../../assets/animations/player/turn-left.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:../../assets/animations/player/turn-left.xml;Sprites/Animations/turn-left.xml
+
+#begin ../../assets/animations/player/turn-right.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:../../assets/animations/player/turn-right.xml;Sprites/Animations/turn-right.xml
 
 #begin ../../assets/music/FutureAmbient_1.wav
 /importer:WavImporter
@@ -190,21 +201,21 @@
 
 #begin Fonts/GameOver.spritefont
 /importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
+/processor:LocalizedFontProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Fonts/GameOver.spritefont
 
 #begin Fonts/Lives.spritefont
 /importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
+/processor:LocalizedFontProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Fonts/Lives.spritefont
 
 #begin Fonts/Stats.spritefont
 /importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
+/processor:LocalizedFontProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Fonts/Stats.spritefont

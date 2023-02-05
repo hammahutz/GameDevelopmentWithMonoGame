@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Engine2DPipelineExtension.Animation;
 
 namespace VerticalGame.Engine.States
 {
@@ -53,21 +54,13 @@ namespace VerticalGame.Engine.States
             _soundManager.PlaySoundtrack();
         }
 
-        protected Texture2D LoadTexture(string textureName)
-        {
-            return _contentManager.Load<Texture2D>(textureName);
-        }
+        protected Texture2D LoadTexture(string textureName) => _contentManager.Load<Texture2D>(textureName);
+        protected AnimationData LoadAnimation(string animationName) => _contentManager.Load<AnimationData>(animationName);
 
-        protected SpriteFont LoadFont(string fontName)
-        {
-            return _contentManager.Load<SpriteFont>(fontName);
-        }
+        protected SpriteFont LoadFont(string fontName) => _contentManager.Load<SpriteFont>(fontName);
 
-        protected SoundEffect LoadSound(string soundName)
-        {
-            return _contentManager.Load<SoundEffect>(soundName);
-        }
- 
+        protected SoundEffect LoadSound(string soundName) => _contentManager.Load<SoundEffect>(soundName);
+
         protected void NotifyEvent(BaseGameStateEvent gameEvent)
         {
             OnEventNotification?.Invoke(this, gameEvent);

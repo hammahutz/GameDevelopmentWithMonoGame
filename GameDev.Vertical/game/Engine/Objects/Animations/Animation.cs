@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Engine2DPipelineExtension.Animation;
+using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,6 +10,7 @@ namespace VerticalGame.Engine.Objects.Animations
         private List<AnimationFrame> _frames = new List<AnimationFrame>();
         private int _animationAge = 0;
         private int _lifespan = -1;
+        private AnimationData _animationData;
         private bool _isLoop = false;
 
         public int Lifespan {
@@ -59,7 +61,7 @@ namespace VerticalGame.Engine.Objects.Animations
         {
             get
             {
-                var newAnimation = new Animation(_isLoop);
+                var newAnimation = new Animation(_animationData);
                 for (int i = _frames.Count - 1; i >= 0; i--)
                 {
                     newAnimation.AddFrame(_frames[i].SourceRectangle, _frames[i].Lifespan);
@@ -69,9 +71,11 @@ namespace VerticalGame.Engine.Objects.Animations
             }
         }
 
-        public Animation(bool looping)
+        public Animation(AnimationData data)
         {
-            _isLoop = looping;
+            _animationData = data;
+            _isLoop = data.IsLooping;
+            data.Frames.ForEach(f => AddFrame(new Rectangle(f.X, f.Y, f.CellWidth, f.CellHeight), data.AnimationSpeed));
         }
 
         public void AddFrame(Rectangle sourceRectangle, int lifespan)

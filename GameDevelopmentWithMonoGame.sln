@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "chapter11", "GameDev.Vertic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineExtension", "PipelineExtension\PipelineExtension.csproj", "{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine2DPipelineExtensions", "Engine2DPipelineExtensions\Engine2DPipelineExtensions.csproj", "{6C7072DB-E7E8-4D5C-8C28-62DF89494E68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ADDD111-746E-4E56-BB8C-3DA64B09F4D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C7072DB-E7E8-4D5C-8C28-62DF89494E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7072DB-E7E8-4D5C-8C28-62DF89494E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7072DB-E7E8-4D5C-8C28-62DF89494E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7072DB-E7E8-4D5C-8C28-62DF89494E68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

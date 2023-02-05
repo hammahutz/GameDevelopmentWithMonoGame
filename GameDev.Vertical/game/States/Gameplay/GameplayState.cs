@@ -23,6 +23,8 @@ namespace VerticalGame.States
 
         private const string BackgroundTexture = "Sprites/Barren";
         private const string PlayerFighter = "Sprites/Animations/FighterSpriteSheet";
+        private const string PlayerAnimationTurnLeft = "Sprites/Animations/turn-left";
+        private const string PlayerAnimationTurnRight = "Sprites/Animations/turn-right";
         private const string BulletTexture = "Sprites/bullet";
         private const string ExhaustTexture = "Sprites/Cloud";
         private const string MissileTexture = "Sprites/Missile";
@@ -89,7 +91,8 @@ namespace VerticalGame.States
             _explosionTexture = LoadTexture(ExplosionTexture);
             _chopperTexture = LoadTexture(ChopperTexture);
 
-            _playerSprite = new PlayerSprite(LoadTexture(PlayerFighter));
+
+            _playerSprite = new PlayerSprite(LoadTexture(PlayerFighter), LoadAnimation(PlayerAnimationTurnLeft), LoadAnimation(PlayerAnimationTurnRight));
             _livesText = new LivesText(LoadFont(TextFont));
             _livesText.NbLives = StartingPlayerLives;
             _livesText.Position = new Vector2(10.0f, 690.0f);
@@ -254,7 +257,7 @@ namespace VerticalGame.States
 
         private void _level_OnLevelStart(object sender, LevelEvents.StartLevel e)
         {
-            _levelStartEndText.Text = "Good luck, Player 1!";
+            _levelStartEndText.Text = Strings.Goo;
             _levelStartEndText.Position = new Vector2(350, 300);
             AddGameObject(_levelStartEndText);
         }
@@ -388,32 +391,32 @@ namespace VerticalGame.States
                 _chopperGenerator.StopGenerating();
             }
 
-            foreach(var bullet in _bulletList)
+            foreach (var bullet in _bulletList)
             {
                 RemoveGameObject(bullet);
             }
 
-            foreach(var missile in _missileList)
+            foreach (var missile in _missileList)
             {
                 RemoveGameObject(missile);
             }
 
-            foreach(var chopper in _enemyList)
+            foreach (var chopper in _enemyList)
             {
                 RemoveGameObject(chopper);
             }
 
-            foreach(var explosion in _explosionList)
+            foreach (var explosion in _explosionList)
             {
                 RemoveGameObject(explosion);
             }
 
-            foreach(var bullet in _turretBulletList)
+            foreach (var bullet in _turretBulletList)
             {
                 RemoveGameObject(bullet);
             }
 
-            foreach(var turret in _turretList)
+            foreach (var turret in _turretList)
             {
                 RemoveGameObject(turret);
             }
@@ -483,7 +486,7 @@ namespace VerticalGame.States
         private List<T> CleanObjects<T>(List<T> objectList, Func<T, bool> predicate) where T : BaseGameObject
         {
             List<T> listOfItemsToKeep = new List<T>();
-            foreach(T item in objectList)
+            foreach (T item in objectList)
             {
                 var performRemoval = predicate(item);
 
@@ -532,7 +535,7 @@ namespace VerticalGame.States
             foreach (var explosion in _explosionList)
             {
                 explosion.Update(gameTime);
-                
+
                 if (explosion.Age > ExplosionActiveLength)
                 {
                     explosion.Deactivate();
@@ -544,7 +547,7 @@ namespace VerticalGame.States
                 }
             }
         }
- 
+
         private void Shoot(GameTime gameTime)
         {
             if (!_isShootingBullets)

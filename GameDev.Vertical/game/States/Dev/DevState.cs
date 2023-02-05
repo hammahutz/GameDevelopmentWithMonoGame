@@ -31,7 +31,7 @@ namespace VerticalGame.States
             _turret.Active = true;
             AddGameObject(_turret);
 
-            _playerSprite = new PlayerSprite(LoadTexture(PlayerFighter));
+            // _playerSprite = new PlayerSprite(LoadTexture(PlayerFighter));
             // position the player in the middle of the screen, at the bottom, leaving a slight gap at the bottom
             var playerXPos = _viewportWidth / 2 - _playerSprite.Width / 2;
             var playerYPos = _viewportHeight - _playerSprite.Height - 30;
@@ -82,7 +82,7 @@ namespace VerticalGame.States
             });
         }
 
-        public override void UpdateGameState(GameTime gameTime) 
+        public override void UpdateGameState(GameTime gameTime)
         {
             _playerSprite.Update(gameTime);
             _turret.Update(gameTime, _playerSprite.CenterPosition);
