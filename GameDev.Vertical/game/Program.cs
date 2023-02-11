@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate;
 using System.Xml;
 using Engine2DPipelineExtension.Animation;
+using chapter11;
 
 namespace VerticalGame
 {
@@ -55,7 +56,8 @@ namespace VerticalGame
                         CellHeight = 2
                     }
                 }
-            };
+
+        };
 
 
             using(XmlWriter writer = XmlWriter.Create("animation.xml", new XmlWriterSettings(){Indent = true}))
